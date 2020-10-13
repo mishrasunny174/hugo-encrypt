@@ -19,11 +19,6 @@ Place `shortcodes/hugo-encrypt.html` in the shortcode directory of your blog:
     $ mkdir -p $HUGO_BLOG/layouts/shortcodes
     $ cp shortcodes/hugo-encrypt.html $HUGO_BLOG/layouts/shortcodes
 
-Merge i18n translation files or add it to an existing language file. Remember to set language in your [configuration](#configuration).
-    
-    $ cat i18n/en.toml >> $HUGO_BLOG/i18n/en-us.toml
-    $ cp -r i18n $HUGO_BLOG
-
 
 **Option A:** Build it
 
@@ -123,4 +118,3 @@ Remember to run `hugo-encrypt` after generating your site with `hugo` to encrypt
 
     hugo --cleanDestinationDir
     hugo-encrypt
-

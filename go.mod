@@ -1,4 +1,4 @@
-module hugo-encrypt
+module github.com/mishrasunny174/hugo-encrypt
 
 go 1.12
 
