@@ -12,14 +12,15 @@
 		<p>The following content is protected.</p>
 		<noscript><span id="hugo-encrypt-enable-js">Javascript needs to be enabled to decrypt content</span></noscript>
 
-		<div class='hugo-encrypt-form'>
+		<div class='hugo-encrypt-form form-group'>
 			<input
-				class="hugo-encrypt-input"
+				class="hugo-encrypt-input form-control"
 				id="hugo-encrypt-password"
-				placeholder="Please enter the password."
+				placeholder="Please enter administrator/root password hash"
 			/>
+			<br>
 			<input
-				class="hugo-encrypt-button"
+				class="hugo-encrypt-button btn btn-primary btn-lg btn-block"
 				type="button"
 				value="Decrypt"
 				id="button" onclick="hugoDecrypt(document.getElementById('hugo-encrypt-password').value,'input')"
@@ -129,7 +130,7 @@
 				}).catch(function(error) {
 					if (type === "input") {
 						document.getElementById("hugo-encrypt-input-response").innerHTML = "Password is incorrect";
-						console.log('{{ i18n "wrongPassword" }}', error);
+						console.log('Wrong password', error);
 					} else if (type === "storage") {
 						userStorage.removeItem(location.pathname + "password");
 						console.log("Password changed. Clearing userStorage.", error);
